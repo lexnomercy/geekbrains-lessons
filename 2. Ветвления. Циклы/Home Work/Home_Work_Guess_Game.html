@@ -1,0 +1,75 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	alert("Привет, я хочу сыграть с тобой в игру!");
+	alert("Я загадаю три загадки, твоя задача отгадать их!");
+	alert("Если тебе надоест раньше, напиши СТОП");
+
+	var answerOne = "лампочка";
+	var answerTwo = ["ель", "елка"];
+	var answerThree = ["ножницы", "гомосеки", "гомосексуалисты"];
+	var startGame = prompt("Если ты готов, напиши СТАРТ");
+	var endGame = "";
+	var stopGame = "СТОП";
+	//var rightAnswers = 0
+
+	while(startGame == "СТАРТ"){
+			var rightAnswers = 0 // Обнуляем счетчик ответов при каждом старте цикла
+			alert("Загадка номер 1");
+			var questionOne = prompt("Висит груша, нельзя скушать!");
+			//questionOne.toLowerCase()
+				if (questionOne.toLowerCase() == stopGame){
+					endGame = "Конец игры :(";
+					break;
+				} else if (questionOne.toLowerCase() != answerOne){
+					alert("Ответ не верный");
+				}
+				 else if (questionOne.toLowerCase() == answerOne){
+					rightAnswers = rightAnswers + 1;
+					alert("You god damn right");
+				}
+			
+
+			alert("Загадка номер 2");
+			var questionTwo = prompt("Зимой и летом, одним цветом?");
+				if (questionTwo == stopGame){
+					endGame = "Игра окончена";
+					break;
+				} else if (answerTwo.indexOf(questionTwo.toLowerCase()) != -1){ // Здесь осуществляем поиск по массиву, приводим все к одному регистру, если есть совпадение, получем FALSE и поздравляем пользователя. 
+					rightAnswers = rightAnswers + 1;
+					alert("Да ты неудержим!");
+				} else if(answerTwo.indexOf(questionTwo.toLowerCase()) == -1){ // здесь делаем тоже самое, но при отсуствии элемента, получаем TRUE.
+					alert("Твой проигрышь все ближе, ответ не верный!");
+				}
+
+
+			alert("Загадка номер 3");
+			var questionThree = prompt("два кольца, два конца?");
+				if (questionThree == stopGame){
+					endGame = "Конец игры! Хахахаха!";
+					break;
+				} else if (answerThree.indexOf(questionThree.toLowerCase()) != -1){
+					alert("Да ты вундеркинд, bro!");
+					rightAnswers = rightAnswers + 1;
+				} else if (answerThree.indexOf(questionThree.toLowerCase()) == -1){
+					alert("Нет, ответ не " + questionThree);
+				}
+		
+
+	alert("Количество верных ответов: " + rightAnswers);
+	alert("Хочешь попробовать еще раз?");
+	var newGame = prompt("Напиши ДА или НЕТ");
+		if (newGame != "ДА"){
+			endGame = "Game over";
+			break;
+		}
+	}
+
+
+	alert(endGame + "\nСпасибо, что выбрали нашу авиакомпанию.");
+
+
+
+</script>
+
+
