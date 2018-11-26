@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+
+	var numbers = []
+	for (var i = 0; i < 5; i++){
+		var randomNumber = parseInt(Math.random() * 100)
+		numbers.push(randomNumber);
+	}	
+
+
+	//var numbers = [10,12,13,15,16];
+	//numbers.push(42); //Если массив пустой, то этой командой мы добавляем нулевой элемент в массив.
+	//numbers.push(42,18,11) // Добавление элементов 0, 1 и 2
+	//numbers.pop(); //убирает последний элемент, если применять к прошлому значению, то будет удален 11. 
+	//var m = numbers.pop(); //Убирает элемент из массива и кладет его в переменную. Если выполнить прошлую цепочку, то 18 упадет в переменную m, а в массиве останется только 42.
+	alert("Запомните числа и их порядок: " + numbers);
+
+	var userAnswer = +prompt("каким было первое число?");
+	if (userAnswer == numbers[0]){
+		alert("Да, вы правы");
+	} else {
+		alert("Нет =( \nПравильный ответ " + numbers[0]);
+	}
+
+	userAnswer = +prompt("А последнее?");
+	//alert(numbers.length);
+	//alert(numbers[numbers.length - 1]);
+
+	if (userAnswer == numbers[numbers.length - 1]){
+		alert("Вы снова угадали");
+	} else {
+		alert("Ошибка =( \nПравильный ответ " + numbers[numbers.length - 1])
+	}
+	// Генерим рандомное число из диапазона массива. 
+	var randomDigit = parseInt(Math.random() * numbers.length);
+	userAnswer = +prompt("А как насчет числа под номером " + (randomDigit + 1) + "?") //Для пользователя показываем элемент, под номером, который был сгенерирован в генераторе. +1 делаем для того, чтобы избавится от нуля (как первого элемента, а то у пользователя шаблон треснет. )
+	if (userAnswer == numbers[randomDigit]){
+		alert("И снова верно!");
+	} else {
+		alert("Нет =( \nПравильный ответ " + numbers[randomDigit])
+	}
+
+
+
+
+</script>
