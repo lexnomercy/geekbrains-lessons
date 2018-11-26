@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var words = [
+		["food", "еда"],
+		["bike", "велосипед"],
+		["chiken", "курицу"],
+		["weed", "травка"],
+		["god", "бог"],
+	];
+
+	// alert(words[0]); // "food", "еда"
+	// alert(words[1]); // "bike", "велосипед"
+	// alert(words[0][0])// "food"
+	var i = parseInt(Math.random() * words.length);
+	var userAnswer = prompt("Перевод слова: " + words[i][0]);
+	if (userAnswer == words[i][1]){
+		alert("Вы правы");
+	} else {
+		alert("Правильный ответ " + words[i][1]);		
+	}
+	
+</script>
