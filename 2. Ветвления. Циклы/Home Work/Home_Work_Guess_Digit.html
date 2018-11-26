@@ -1,0 +1,111 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	alert("Я хочу сыграть с тобой в игру");
+	//var answer = parseInt(Math.random() * 100); // Генерация рандомного числа и округление до целого. 
+	var maxCount = 5;
+	var playerOne = "";
+	var playerTwo = "";
+	var stopGame = "СТОП";
+	var newGame = false;
+	var playerCount = +prompt("В игре может быть два игрока. \nСколько будет игроков?\nВведите число 1 или 2."); 
+	if (playerCount == 2){
+		playerOne = prompt("Введите имя первого игрока");
+		playerTwo = prompt("Введите имя второго игрока");
+	} else {
+		playerOne = prompt("Введите имя");
+	}
+	
+
+
+// цикл для одного игрока
+
+
+	if (playerCount == 1){
+		var maxCountChoice = prompt("По умолчанию вам доступно 5 попыток. \nХотите изменить число попыток? \nВведите ДА или НЕТ.");
+			if (maxCountChoice == "ДА"){
+				maxCount = +prompt("Введите число попыток");
+			}
+		var answer = parseInt(Math.random() * 100);
+		var playerOneAnswer = +prompt("Введите ваше число");
+		for(var count = 1; count < maxCount; count++){
+			if(playerOneAnswer == answer){
+				alert(playerOne + " верно!")
+				break;
+			} else if(playerOneAnswer > answer){
+				alert(playerOne + " ваше число больше!");
+			} else if(playerOneAnswer < answer){
+				alert(playerOne + " ваше число меньше!");
+			}
+			//("У вас осталось " + (maxCount - count) + " попыток");
+			playerOneAnswer = +prompt(playerOne + " повторите попытку \nУ вас осталось "  + (maxCount - count) + " попыток");
+		}
+		if (count >= maxCount){
+			alert("К сожалению вы проиграли");
+		}
+		alert(playerOne + " правильный ответ: " + answer);
+	}
+
+
+// цикл для двух игроков	
+	while (!newGame){
+			if (playerCount == 2){
+					// игрок 1
+					var answer = parseInt(Math.random() * 100);
+					var maxCountChoice = prompt("По умолчанию вам доступно 5 попыток. \nХотите изменить число попыток? \nВведите ДА или НЕТ.");
+						if (maxCountChoice == "ДА"){
+							maxCount = +prompt("Введите число попыток");
+						}
+					var playerOneAnswer = +prompt(playerOne + " введите ваше число");
+					for(var count = 1; count < maxCount; count++){
+						if(playerOneAnswer == answer){
+							alert(playerOne + " верно!");
+							break;
+						} else if(playerOneAnswer > answer){
+							alert(playerOne + " ваше число больше!");
+						} else if(playerOneAnswer < answer){
+							alert(playerOne + " ваше число меньше!");
+						}
+						//("У вас осталось " + (maxCount - count) + " попыток");
+						playerOneAnswer = +prompt(playerOne + " повторите попытку \nУ вас осталось "  + (maxCount - count) + " попыток");
+					}
+					if (count >= maxCount){
+						alert(playerOne + " к сожалению вы проиграли");
+					}
+					alert("Правильный ответ: " + answer);
+					// игрок 2
+					var answer = parseInt(Math.random() * 100);
+/*					var maxCountChoice = prompt("Хотите выбрать число попыток? \nВведите ДА или НЕТ.");
+						if (maxCountChoice == "ДА"){
+							maxCount = +prompt("Введите число попыток");
+						}*/
+					var playerTwoAnswer = +prompt(playerTwo + " введите ваше число");
+					for(var count = 1; count < maxCount; count++){
+						if(playerTwoAnswer == answer){
+							alert(playerTwo + " верно!");
+							break;
+						} else if(playerTwoAnswer > answer){
+							alert(playerTwo + " ваше число больше!");
+						} else if(playerTwoAnswer < answer){
+							alert(playerTwo + " ваше число меньше!");
+						}
+						//("У вас осталось " + (maxCount - count) + " попыток");
+						playerTwoAnswer = +prompt(playerTwo + " повторите попытку \nУ вас осталось "  + (maxCount - count) + " попыток");
+					}
+					if (count >= maxCount){
+						alert(playerTwo + "к сожалению вы проиграли");
+					}
+					alert("Правильный ответ: " + answer);
+			}
+		var restart = prompt("Хотите сыграть еще раз? \nВведите ДА или НЕТ");	
+		if (restart == "НЕТ"){
+			newGame = true;
+		}/* else {
+			break;
+		}*/
+	}
+
+	alert("Спасибо за игру!");
+
+
+</script>
