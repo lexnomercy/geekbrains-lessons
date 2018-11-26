@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	alert("Я хочу сыграть с тобой в игру");
+	var answer = parseInt(Math.random() * 100); // Генерация рандомного числа и округление до целого. 
+	var userAnswer = +prompt("Введите ваше число");
+	var maxCount = 7;
+	for(var count = 1; count < maxCount; count++){
+		if(userAnswer == answer){
+			alert("Верно!")
+			break;
+		} else if(userAnswer > answer){
+			alert("Ваше число больше!");
+		} else if(userAnswer < answer){
+			alert("Ваше число меньше!");
+		}
+		("У вас осталось " + (maxCount - count) + " попыток");
+		userAnswer = +prompt("Повторите попытку \n У вас осталось "  + (maxCount - count) + " попыток");
+	}
+	if (count > maxCount){
+		alert("К сожалению вы проиграли")
+	}
+
+
+	alert("Правильный ответ: " + answer);
+
+
+
+</script>
