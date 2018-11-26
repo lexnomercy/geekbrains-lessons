@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var deposit = 0
+	var percent = 0
+	var yearCount = 0
+
+	alert("Добро пожаловть в наш банк \nМы подготовили для вас лучшее предложение.");
+	deposit = +prompt("Введите сумму депозита");
+	percent = +prompt("Введите процентную ставку");
+	yearCount = +prompt("Введите количество лет");
+	var startProcess = prompt("Введите СТАРТ для начала расчета");
+
+	
+	while (startProcess == "СТАРТ"){
+			var allDeposit = deposit;
+			for (var i = 0; i < yearCount; i++){
+			allDeposit = allDeposit +((allDeposit*percent)/100);
+			alert("Ваш сумарный доход в год " + (i + 1) + " составит: " + allDeposit.toFixed(2) + "\n");
+		}
+		break;
+	}
+
+	var score = prompt("Довольны ли вы произведенным расчетом? \nНапишите ДА, если довольны.\nНапишите НЕТ, если недовольны.");
+	if (score == "ДА"){
+		alert("Спасибо за вашу оценку.\nОна помогает нам стать лучше.");
+	}else {
+		alert("Нам очень жаль =(");
+	}
+	
+	alert("Спасибо, что выбрали наш банк.");
+
+
+</script>
