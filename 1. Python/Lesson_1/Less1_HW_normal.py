@@ -52,4 +52,3 @@ else:
   x2 = (-b - math.sqrt(D)) / (2 * a)
   print(x1)
   print(x2)
-#
