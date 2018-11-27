@@ -21,3 +21,4 @@ print(a == a*2) #True
 print(a > 999999) #True
 
 # a = бесконечность
+#
