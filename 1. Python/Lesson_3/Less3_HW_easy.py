@@ -1,7 +1,8 @@
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import random
+import math
+import re
 
 __author__ = "Орехов Алексей Александрович"
 
@@ -56,7 +57,7 @@ ticketNumber = [random.randint(0, 9) for i in range(6)]
 # a = int(len(ticketNumber))
 # print(a)
 
-#print(ticketNumber)
+# print(ticketNumber)
 
 
 # Слишком громоздкое решение
@@ -75,7 +76,3 @@ print(ticketNumber)
 a = LuckyTicket(ticketNumber)
 print(ticketNumber)
 b = LuckyTicketSum(ticketNumber)
-
-
-
-
