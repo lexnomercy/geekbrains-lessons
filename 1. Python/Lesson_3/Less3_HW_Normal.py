@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import random
 import math
-import re
+
 __author__ = "Орехов Алексей Александрович"
 
 
