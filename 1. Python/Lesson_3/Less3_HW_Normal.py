@@ -3,7 +3,6 @@
 import random
 import math
 
-
 __author__ = "Орехов Алексей Александрович"
 
 
@@ -105,17 +104,17 @@ def parallelogram(a, b, c, d):
     # ищем признаки парраллелограмма
     side1 = False
     side2 = False
-    
+
     ab = math.sqrt((b[0] - a[0])**2 + (b[1] - a[1])**2)
     cb = math.sqrt((b[0] - c[0])**2 + (b[1] - c[1])**2)
     cd = math.sqrt((d[0] - c[0])**2 + (d[1] - c[1])**2)
     ad = math.sqrt((d[0] - a[0])**2 + (d[1] - a[1])**2)
     if ab == cd and cb == ad:
-        print("Стороны AB({}) - CD({}) и CB({}) - AD({}), равны".format(round(ab), round(cd), cb, ad))    
+        print("Стороны AB({}) - CD({}) и CB({}) - AD({}), равны".format(round(ab), round(cd), cb, ad))
         side1 = True
     else:
         print('Противоположные стороны НЕ равны')
-    #Проверка: диагонали параллелограмма точкой пересечения делятся пополам 
+    #Проверка: диагонали параллелограмма точкой пересечения делятся пополам
     diagonal1 = ((a[0] + c[0])/2, (a[1] + c[1])/2)
     diagonal2 = ((b[0] + d[0])/2, (b[1] + d[1])/2)
     if diagonal1 == diagonal2:
@@ -126,9 +125,3 @@ def parallelogram(a, b, c, d):
         print('Проверьте точки вершин')
 
 parallelogram(A1, A2, A3, A4)
-
-
-
-
-
-

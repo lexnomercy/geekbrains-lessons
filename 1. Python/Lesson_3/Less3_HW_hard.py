@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 import random
 import math
-import re
 
 __author__ = "Орехов Алексей Александрович"
 
@@ -77,6 +76,3 @@ salary_calculate()
 # Подсказка:
 # Чтобы получить список больших букв русского алфавита:
 # print(list(map(chr, range(ord('а'), ord('я')+1))))
-
-
-
